@@ -1,0 +1,219 @@
+/* Estilos generales para el cuerpo y la barra de navegación */
+body {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    /* Fondo con un degradado chulo */
+    color: #333333;
+    /* Texto oscuro */
+    overflow-y: auto;
+}
+
+/* Estilos para la barra de navegación con tema oscuro */
+nav {
+    background-color: #343a40;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    padding: 15px;
+}
+
+h1 {
+    display: inline;
+    margin-right: 20px;
+    /* Ajusta el espacio entre el título y las opciones */
+}
+
+#offcanvasNavbar {
+    background-color: #343a40;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+#offcanvasNavbar h4 {
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+#offcanvasNavbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* Hace que los elementos de la lista se muestren en línea */
+}
+
+#offcanvasNavbar li {
+    margin-right: 20px;
+    /* Ajusta el espacio entre las opciones */
+}
+
+.botoneSinSesion,
+.botonesConSesion {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.botoneSinSesion:hover,
+.botonesConSesion:hover {
+    background-color: #495057;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para la lista de manualidades y el formulario de registro de manualidades */
+.custom-container {
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+    background-color: #ffffff;
+    /* Fondo claro */
+    color: #333333;
+    /* Texto oscuro */
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.custom-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.custom-list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list-group-item {
+    background-color: #ffffff;
+    /* Fondo claro */
+    color: #333333;
+    /* Texto oscuro */
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.custom-list-group-item h5 {
+    margin-bottom: 0.5rem;
+}
+
+.custom-list-group-item p {
+    margin-bottom: 0.25rem;
+}
+
+.custom-list-group-item button {
+    width: 100%;
+}
+
+.custom-list-group-item button.Eliminar-Manualidad {
+    background-color: #dc3545;
+    /* Fondo rojo */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+.custom-list-group-item button.Actualizar-Manualidad {
+    background-color: #28a745;
+    /* Fondo verde */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+.custom-list-group-item button:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para el formulario de registro de paises */
+#manualidad-form-container {
+    background-color: #ffffff;
+    /* Fondo claro */
+    color: #333333;
+    /* Texto oscuro */
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-top: 12rem;
+    overflow-y: scroll;
+    /* Añade un scroll vertical cuando sea necesario */
+    max-height: 70vh;
+    /* Limita la altura máxima del contenedor al 70% de la altura visible */
+}
+
+.contenedor-datos label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+    max-width: 100%;
+    /* Ajusta la anchura máxima de las etiquetas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Agrega puntos suspensivos (...) para indicar que el texto está truncado */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
+}
+
+.custom-form-control {
+    background-color: #f8f9fa;
+    /* Fondo claro para inputs */
+    color: #333333;
+    /* Texto oscuro */
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    /* Ajustado el espacio interno */
+    font-size: 1rem;
+    /* Ajustado el tamaño de fuente */
+    margin-bottom: 15px;
+    max-width: 100%;
+    /* Ajusta la anchura máxima del campo de entrada */
+    box-sizing: border-box;
+    /* Incluye el borde y el relleno en la anchura total */
+}
+
+.custom-btn-primary {
+    background-color: #007bff;
+    /* Fondo azul */
+    color: #ffffff;
+    /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    /* Ajustado el espacio interno */
+    font-size: 1rem;
+    /* Ajustado el tamaño de fuente */
+}
+
+/* Estilos para el contenedor de datos */
+.contenedor-datos {
+    background-color: #f8f9fa;
+    /* Fondo claro */
+    color: #333333;
+    /* Texto oscuro */
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    /* Ajusta la anchura máxima del contenedor */
+    box-sizing: border-box;
+    /* Incluye el borde y el relleno en la anchura total */
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+
+    .custom-form-label,
+    .custom-form-control,
+    .custom-btn-primary {
+        font-size: 1rem;
+    }
+}
