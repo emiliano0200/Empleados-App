@@ -17,9 +17,9 @@
 
 <body>
     <!-- Navbar con tema oscuro -->
-    <nav class="fixed-top">
+    <nav>
         <div>
-            <h1 href="#">PAISES</h1>
+            <h1 href="#">EMPLEADOS</h1>
             <div tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div>
                     <h4 id="offcanvasNavbarLabel">Opciones</h4>
@@ -35,12 +35,12 @@
                                 data-bs-target="#Registrarse">REGISTRARSE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="botonesConSesion" id="Mostrar-Manualidades" href="Subir Paises.html">REGISTRAR UN
-                                PAIS</a>
+                            <a class="botonesConSesion" id="Mostrar-Manualidades" href="SubirEmpleados.html">REGISTRAR
+                                UN EMPLEADO</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                PAISES</a>
+                                EMPLEADOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -53,40 +53,38 @@
 
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Formulario de Registro de Paises -->
+    <!-- Formulario de Registro de Empleados -->
     <div id="manualidad-form-container" class="custom-container">
         <div class="custom-row">
-            <form id="Formulario-Pais" class="custom-col">
+            <form id="Formulario-Empleado" class="custom-col">
                 <div class="contenedor-datos">
-                    <label for="Nombre-Pais" class="custom-form-label">Nombre del País:</label>
-                    <input type="text" class="custom-form-control" id="Nombre-Pais" placeholder="Nombre del País">
+                    <label for="Nombre-Empleado" class="custom-form-label">Nombre del Empleado:</label>
+                    <input type="text" class="custom-form-control" id="Nombre-Empleado"
+                        placeholder="Nombre del Empleado">
                 </div>
                 <div class="contenedor-datos">
-                    <label for="Capital-Pais" class="custom-form-label">Capital del País:</label>
-                    <input type="text" class="custom-form-control" id="Capital-Pais" placeholder="Capital del País">
+                    <label for="Cargo-Empleado" class="custom-form-label">Cargo del Empleado:</label>
+                    <input type="text" class="custom-form-control" id="Cargo-Empleado" placeholder="Cargo del Empleado">
                 </div>
                 <div class="contenedor-datos">
-                    <label for="Poblacion-Pais" class="custom-form-label">Población del País:</label>
-                    <input type="text" class="custom-form-control" id="Poblacion-Pais" placeholder="Población del País">
+                    <label for="Departamento-Empleado" class="custom-form-label">Departamento del Empleado:</label>
+                    <input type="text" class="custom-form-control" id="Departamento-Empleado"
+                        placeholder="Departamento del Empleado">
                 </div>
                 <div class="contenedor-datos">
-                    <label for="Idioma-Pais" class="custom-form-label">Idioma del País:</label>
-                    <input type="text" class="custom-form-control" id="Idioma-Pais" placeholder="Idioma del País">
+                    <label for="Salario-Empleado" class="custom-form-label">Salario del Empleado:</label>
+                    <input type="text" class="custom-form-control" id="Salario-Empleado"
+                        placeholder="Salario del Empleado">
                 </div>
                 <div class="contenedor-datos">
-                    <label for="Moneda-Pais" class="custom-form-label">Moneda del País:</label>
-                    <input type="text" class="custom-form-control" id="Moneda-Pais" placeholder="Moneda del País">
+                    <label for="FechaContratacion-Empleado" class="custom-form-label">Fecha de Contratación:</label>
+                    <input type="date" class="custom-form-control" id="FechaContratacion-Empleado">
                 </div>
-                <div class="contenedor-datos">
-                    <label for="FechaFundacion-Pais" class="custom-form-label">Fecha de Fundación:</label>
-                    <input type="date" class="custom-form-control" id="FechaFundacion-Pais">
-                </div>
-                <button type="submit" class="custom-btn custom-btn-primary" id="Guardar-Pais">Guardar
-                    País</button>
+                <button type="submit" class="custom-btn custom-btn-primary" id="Guardar-Empleado">Guardar
+                    Empleado</button>
             </form>
         </div>
     </div>
-
 
 
     <!-- MODAL DE INICIO DE SESION -->

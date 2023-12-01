@@ -2,32 +2,32 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/fi
 import { db } from "./firebase.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    const formularioPais = document.querySelector('#Formulario-Pais');
+    const formularioEmpleado = document.querySelector('#Formulario-Empleado');
 
-    formularioPais.addEventListener('submit', async (e) => {
+    formularioEmpleado.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const NOMBRE = formularioPais['Nombre-Pais'].value;
-        const CAPITAL = formularioPais['Capital-Pais'].value;
-        const POBLACION = formularioPais['Poblacion-Pais'].value;
-        const IDIOMA = formularioPais['Idioma-Pais'].value;
-        const MONEDA = formularioPais['Moneda-Pais'].value;
-        const FECHA_FUNDACION = formularioPais['FechaFundacion-Pais'].value;
+        const NOMBRE = formularioEmpleado['Nombre-Empleado'].value;
+        const CARGO = formularioEmpleado['Cargo-Empleado'].value;
+        const DEPARTAMENTO = formularioEmpleado['Departamento-Empleado'].value;
+        const SALARIO = formularioEmpleado['Salario-Empleado'].value;
+        const FECHA_CONTRATACION = formularioEmpleado['FechaContratacion-Empleado'].value;
 
         try {
-            const nuevoPaisRef = await addDoc(collection(db, 'Paises'), {
+            const nuevoEmpleadoRef = await addDoc(collection(db, 'Empleados'), {
                 Nombre: NOMBRE,
-                Capital: CAPITAL,
-                Poblacion: POBLACION,
-                Idioma: IDIOMA,
-                Moneda: MONEDA,
-                FechaFundacion: FECHA_FUNDACION,
+                Cargo: CARGO,
+                Departamento: DEPARTAMENTO,
+                Salario: SALARIO,
+                FechaContratacion: FECHA_CONTRATACION,
             });
 
-            alert(`El país ${NOMBRE} ha sido registrado exitosamente`);
-            formularioPais.reset();
+            alert(`El empleado ${NOMBRE} ha sido registrado exitosamente`);
+            formularioEmpleado.reset();
         } catch (error) {
-            alert('Error al registrar el país:', 'noValido');
+            alert('Error al registrar el empleado:', 'noValido');
+
+            console.log(error);
         }
     });
 });

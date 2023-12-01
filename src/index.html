@@ -10,14 +10,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./main.js"></script>
-    <title>Paises</title>
+    <title>EMPLEADOS UTN</title>
 </head>
 
 <body>
     <!-- Navbar con tema oscuro -->
-    <nav class="fixed-top">
+    <nav>
         <div>
-            <h1 href="#">PAISES</h1>
+            <h1 href="#">EMPLEADOS</h1>
             <div tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div>
                     <h4 id="offcanvasNavbarLabel">Opciones</h4>
@@ -33,12 +33,13 @@
                                 data-bs-target="#Registrarse">REGISTRARSE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="botonesConSesion" id="Mostrar-Manualidades" href="Subir Paises.html">REGISTRAR UN
-                                PAIS</a>
+                            <a class="botonesConSesion" id="Mostrar-Manualidades" href="SubirEmpleados.html">REGISTRAR
+                                UN
+                                EMPLEADO</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                PAISES</a>
+                                EMPLEADOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -52,60 +53,60 @@
 
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Paises -->
+    <!-- Lista de Empleados -->
     <div class="custom-container">
         <div class="custom-row">
             <div class="custom-col">
-                <ul class="custom-list-group Paises"></ul>
+                <ul class="custom-list-group Empleados"></ul> <!-- Cambia a "Empleados" -->
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ActualizarEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true"> <!-- Cambia el ID -->
         <div class="modal-dialog">
             <div class="modal-content bg-light text-dark">
                 <div class="modal-header bg-light">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar País</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Empleado</h1>
+                    <!-- Cambia a "Empleado" -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarPais">
+                    <form id="Formulario-ActualizarEmpleado"> <!-- Cambia a "Empleado" -->
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre del País</label>
+                            <label for="Actualizar-Nombre">Nombre del Empleado</label> <!-- Cambia a "Empleado" -->
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Capital">Capital</label>
-                            <input type="text" id="Actualizar-Capital" class="form-control mb-3"
-                                placeholder="Ingresa la nueva capital">
+                            <label for="Actualizar-Cargo">Cargo</label> <!-- Cambia a "Cargo" -->
+                            <input type="text" id="Actualizar-Cargo" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo cargo">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Poblacion">Población</label>
-                            <input type="text" id="Actualizar-Poblacion" class="form-control mb-3"
-                                placeholder="Ingresa la nueva población">
+                            <label for="Actualizar-Departamento">Departamento</label> <!-- Cambia a "Departamento" -->
+                            <input type="text" id="Actualizar-Departamento" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo departamento">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Idioma">Idioma</label>
-                            <input type="text" id="Actualizar-Idioma" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo idioma">
+                            <label for="Actualizar-Salario">Salario</label> <!-- Cambia a "Salario" -->
+                            <input type="text" id="Actualizar-Salario" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo salario">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Moneda">Moneda</label>
-                            <input type="text" id="Actualizar-Moneda" class="form-control mb-3"
-                                placeholder="Ingresa la nueva moneda">
+                            <label for="Actualizar-FechaContratacion">Fecha de Contratación</label>
+                            <!-- Cambia a "FechaContratacion" -->
+                            <input type="date" id="Actualizar-FechaContratacion" class="form-control mb-3">
                         </div>
-                        <div class="mb-3">
-                            <label for="Actualizar-FechaFundacion">Fecha de Fundación</label>
-                            <input type="date" id="Actualizar-FechaFundacion" class="form-control mb-3">
-                        </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarPais">Actualizar</button>
+                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarEmpleado">Actualizar</button>
+                        <!-- Cambia a "ActualizarEmpleado" -->
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

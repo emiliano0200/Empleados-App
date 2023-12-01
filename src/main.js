@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
-import { MostrarListaPaises } from "./app/CRUDEmpleados.js";
+import { MostrarListaEmpleados } from "./app/CRUDEmpleados.js";
 import { revisaSesion } from "./app/revisaSesion.js";
 import { auth, db } from "./app/firebase.js";
 import './app/iniciaSesionEmailAndPass.js'
@@ -12,10 +12,10 @@ import './app/cierreSesion.js'
 onAuthStateChanged(auth, async (usuario) => {
     if (usuario) {
         // Si el usuario está en el index, muestra la lista de manualidades
-        const querySnapshot = await getDocs(collection(db, 'Paises'))
-        MostrarListaPaises(querySnapshot.docs);
+        const querySnapshot = await getDocs(collection(db, 'Empleados'))
+        MostrarListaEmpleados(querySnapshot.docs);
     } else {
-        MostrarListaPaises([]);  // Puedes ajustar esto según tu lógica
+        MostrarListaEmpleados([]);  // Puedes ajustar esto según tu lógica
     }
     revisaSesion(usuario);
 });

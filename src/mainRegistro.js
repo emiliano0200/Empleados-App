@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
-import { MostrarListaPaises } from "./app/CRUDEmpleados.js";
+import { MostrarListaEmpleados } from "./app/CRUDEmpleados.js";
 import { revisaSesion } from "./app/revisaSesion.js";
 import { auth, db } from "./app/firebase.js";
 import './app/iniciaSesionEmailAndPass.js'
@@ -11,19 +11,6 @@ import './app/subirEmpleados.js'
 import './app/cierreSesion.js'
 
 onAuthStateChanged(auth, async (usuario) => {
-    if (usuario) {
-        const currentPath = window.location.pathname;
 
-        if (currentPath === '/src/index.html') {
-            // Si el usuario está en el index, muestra la lista de manualidades
-            const querySnapshot = await getDocs(collection(db, 'Paises'))
-            MostrarListaPaises(querySnapshot.docs);
-        } else if (currentPath === '/src/Subir Series.html') {
-            // Si el usuario está en la interfaz "Subir Manualidades.html", no muestra nada
-            MostrarListaPaises([]);  // Puedes ajustar esto según tu lógica
-        }
-    } else {
-        MostrarListaPaises([]);  // Puedes ajustar esto según tu lógica
-    }
     revisaSesion(usuario);
 });
